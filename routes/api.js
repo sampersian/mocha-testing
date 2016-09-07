@@ -11,19 +11,19 @@ router.post('/:operation', (req, res, next) => {
 
 //this actually does the adding
 router.post('/add', function(req, res, next) {
-  res.send({result: req.body.num1 + req.body.num2});
+  res.send({result: Number(req.body.num1) + Number(req.body.num2)});
 })
 
 router.post('/subtract', function(req, res, next) {
-  res.send({result: req.body.num1 - req.body.num2});
+  res.send({result: Number(req.body.num1) - Number(req.body.num2)});
 })
 
 router.post('/multiply', function(req, res, next) {
-  res.send({result: req.body.num1 * req.body.num2});
+  res.send({result: Number(req.body.num1) * Number(req.body.num2)});
 })
 
 router.post('/divide', function(req, res, next) {
-  res.send({result: req.body.num1 / req.body.num2});
+  res.send({result: Number(req.body.num1) / Number(req.body.num2)});
 })
 
 router.post('/concat', function(req, res, next) {
