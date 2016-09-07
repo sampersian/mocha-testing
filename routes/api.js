@@ -9,6 +9,9 @@ router.post('/:operation', (req, res, next) => {
   next();
 })
 
+router.get('/add', function(req, res, next) {
+  res.send("You went to add.")
+})
 //this actually does the adding
 router.post('/add', function(req, res, next) {
   res.send({result: Number(req.body.num1) + Number(req.body.num2)});
