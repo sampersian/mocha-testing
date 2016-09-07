@@ -26,4 +26,8 @@ router.post('/divide', function(req, res, next) {
   res.send({result: req.body.num1 / req.body.num2});
 })
 
+router.post('/concat', function(req, res, next) {
+  res.send({result: String(req.body.num1) + String(req.body.num2)});
+})
+
 module.exports = router;
